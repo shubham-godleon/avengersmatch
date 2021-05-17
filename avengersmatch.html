@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENGERS MATCH</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" async></script>
+</head>
+
+<body>
+    <h1 class="page-title">AVENGERS MATCH</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/antman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/antman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/black panther.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/black panther.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/black widow.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/black widow.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/captain america.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/captain america.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/falcon.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/falcon.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/gamora.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/gamora.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/groot.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/groot.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/hawk eye.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/hawk eye.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/hulk.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/hulk.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/iron man.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/iron man.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/loki.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/loki.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/rocket.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/rocket.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/scarlet witch.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/scarlet witch.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/spiderman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/spiderman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/starlord.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/starlord.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/thanos.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/thanos.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/thor.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/thor.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/vision.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/vision.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/war machine.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/war machine.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/winter soldier.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="avenger" src="images/avenger.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="images/winter soldier.png">
+            </div>
+        </div>
+</body>
+
+</html>

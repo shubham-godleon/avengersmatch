@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'avengeroregular';
+    src: url('Fonts/avengeroregular-zvgl-webfont.woff2') format('woff2'),
+         url('Fonts/avengeroregular-zvgl-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avengerodisassembledregular';
+    src: url('Fonts/avengerodisassembledregular-nrvd4-webfont.woff2') format('woff2'),
+         url('Fonts/avengerodisassembledregular-nrvd4-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    cursor: url("images/Thor-normal.cur"), auto;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#d4d8d7 , #a7daee);
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.page-title{
+   color: #44493d;
+   font-family: avengeroregular;
+   font-weight: normal;
+   text-align: center;
+   font-size: 3em;
+}
+
+.game-info{
+    color: #666b5f;
+    font-size: 2em;
+    font-family: avengerodisassembledregular;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(10 , auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.game-info-container{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    height: 125px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.avenger{
+    vertical-align: middle;
+    align-self: center;
+    height: 70px;
+    width: 70px;
+    transform: translateY(-10px);
+    transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover  .avenger{
+   transform: translateY(0);
+}
+
+.card-front{
+    transform: rotateY(180deg);
+    background-color: rgb(238, 233, 233);
+}
+
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border-width:3px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-back{
+    background-color: black;
+    border-color: orange;
+}
+
+.card.visible .card-back {
+transform: rotateY(-180deg);
+}
+
+.card.visible .card-front{
+    transform: rotateY(0);
+}
+
+.card-front:hover .card-value {
+   transform: scale(0.1);
+}
+
+.card-value{
+    transform: scale(0.09);
+    transition: transform 100ms ease-in-out;
+}
+
+.card.visible .card-value{
+/*animation: dance 1s linear infinite 500ms;*/
+transform: scale(0.13);
+transition: transform 100ms ease-in-out;
+}
+
+.card.matched .card-value{
+    transform: scale(0.09);
+    transition: transform 100ms ease-in-out;
+}
+
+/*@keyframes dance 
+{
+    0%, 100% 
+    {
+        transform: rotate(0);
+    }
+    25% 
+    {
+        transform: rotate(-30deg);
+    }
+    75% 
+    {
+        transform: rotate(30deg);
+    }
+}*/
+
+.overlay-text{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: whitesmoke;
+   font-family: avengeroregular;
+   display: none;
+}
+
+.overlay-text.visible{
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow{
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 5em;
+    }
+}
+
+.overlay-text-small{
+    font-size: .2em;
+}
+
+@media(max-width: 600px) {
+    .game-container{
+        grid-template-columns: repeat(4,auto);
+    }
+
+    .game-info-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
